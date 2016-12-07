@@ -1,0 +1,34 @@
+.catalog:
+  name: "HelloThere"
+  version: "v0.1"
+  description: "Hello There Server"
+  uuid: hellothere-0
+  questions: 
+    - variable: "SCALE"
+      label: "Scale"
+      description: "How many servers to run"
+      default: 3
+      required: true
+      type: "int"
+    - variable: "PORT"
+      label: "Port number"
+      description: "On which port should the Load Balancer listen?"
+      default: 8080
+      required: true
+      type: "int"
+    - variable: "COLOR"
+      label: "Color"
+      description: "Color for background (CSS value)"
+      default: "green"
+      type: "string"
+      required: true
+    - variable: "MESSAGE"
+      label: "Message"
+      description: "Message to display"
+      default: "Hello World"
+      type: "string"
+Minecraft:
+  scale: ${SCALE}
+MinecraftLB:
+  load_balancer_config: {}
+

@@ -1,0 +1,15 @@
+HelloThere:
+  environment:
+    COLOR: ${COLOR}
+    MESSAGE: ${MESSAGE}
+  image: brianhicks/hello-there
+
+MinecraftLB:
+  ports:
+  - ${PORT}:8080/tcp
+  tty: true
+  image: rancher/load-balancer-service
+  links:
+  - HelloThere:HelloThere
+  stdin_open: true
+
