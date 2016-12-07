@@ -4,7 +4,7 @@ HelloThere:
     MESSAGE: ${MESSAGE}
   image: brianhicks/hello-there
 
-MinecraftLB:
+HelloThereLB:
   ports:
   - ${PORT}:8080/tcp
   tty: true

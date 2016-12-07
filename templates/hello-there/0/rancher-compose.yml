@@ -27,8 +27,10 @@
       description: "Message to display"
       default: "Hello World"
       type: "string"
-Minecraft:
+
+HelloThere:
   scale: ${SCALE}
-MinecraftLB:
+
+HelloThereLB:
   load_balancer_config: {}
 
